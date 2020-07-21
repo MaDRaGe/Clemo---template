@@ -1,0 +1,20 @@
+$margins: 1, 2, 3, 4, 5
+$margins-768px: 0.5, 1, 1.5, 2, 2.5
+
+@each $margin in $margins
+    .mt-#{$margin}
+        margin-top: #{$margin}rem
+        @media screen and (max-width: 768px)
+            margin-top: #{$margin/2}rem
+    .mb-#{$margin}
+        margin-bottom: #{$margin}rem
+        @media screen and (max-width: 768px)
+            margin-bottom: #{$margin/2}rem
+    .pt-#{$margin}
+        padding-top: #{$margin}rem
+        @media screen and (max-width: 768px)
+            padding-top: #{$margin/2}rem
+    .pb-#{$margin}
+        padding-bottom: #{$margin}rem
+        @media screen and (max-width: 768px)
+            padding-bottom: #{$margin/2}rem
